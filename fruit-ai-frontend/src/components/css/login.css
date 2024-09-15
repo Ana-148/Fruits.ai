@@ -13,6 +13,9 @@ body {
     background: rgb(38, 33, 39) no-repeat fixed center;
     background-size:cover;
     
+        background-image: url("./home_background.jpeg");
+      
+    
 
 }
 .container {
@@ -129,6 +132,13 @@ h2 {
     text-decoration: none;
     font-weight: 600;
 }
-.signup-link a:hover {
-    text-decoration: underline;
-}
+
+
+
+
+
+
+
+
+
+
