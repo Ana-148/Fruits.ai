@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./css/chatbot.css";
-import { GoogleGenerativeAI } from '@google/generative-ai';
+
 
 function FruitFlashcards() {
   const [userInput, setUserInput] = useState('');
