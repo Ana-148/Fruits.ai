@@ -6,7 +6,7 @@ function FruitFlashcards() {
   const [userInput, setUserInput] = useState('');
   const [flippedCards, setFlippedCards] = useState({});
   const [generatedContent, setGeneratedContent] = useState('');
-  const genAI = new GoogleGenerativeAI("AIzaSyAN-bj1PVsH1t3ptw0qKZ5BKdovZ-agFj4");
+  
 
   const flipCard = (fruit) => {
     setFlippedCards((prevCards) => ({ ...prevCards, [fruit]: !prevCards[fruit] }));
@@ -19,13 +19,7 @@ function FruitFlashcards() {
       return;
     }
 
-    try {
-      const response = await genAI.generateContent(userInput);
-      const generatedText = response.content;
-      setGeneratedContent(generatedText);
-    } catch (error) {
-      console.error(error);
-    }
+    
     
   };
 
