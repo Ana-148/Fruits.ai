@@ -60,7 +60,7 @@ const Register = () => {
           {error && <div className="error">{error}</div>}
         </form>
         <div className="signup-link">
-          <a href="/login">Already have an account? Login here</a>
+          <a href="/">Already have an account? Login here</a>
         </div>
       </div>
     </div>
