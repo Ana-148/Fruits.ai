@@ -1,104 +1,188 @@
 /* src/components/Home.css */
-body{
-    background: linear-gradient(to bottom right, #a0e9fd, #cf8bf3);
-    margin-left:auto;
-    justify-content: center;
+body {
+  background: linear-gradient(to bottom right, #a0e9fd, #cf8bf3);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width:100vh;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-    
-    text-align: center;
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.be-healthy-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.service img {
+  width: 60%;
+  height: auto;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.chat {
+  background-color: hsla(60, 91%, 70%, 0.6);
+  color: #ff4081;
+}
+
+.translator {
+  background-color: hsla(198, 89%, 89%, 0.6);
+  color: #3f51b5;
+}
+
+.faqs {
+  background-color: hsla(286, 43%, 81%, 0.6);
+  color: #673ab7;
+}
+
+.about {
+  background-color: hsla(4, 80%, 70%, 0.6);
+  color: #e91e63;
+}
+
+.logout {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Styles for the About popup */
+.about-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.about-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+}
+
+.close-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 10px;
   }
-  
+
   h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 1.8rem;
   }
-  
+
   .be-healthy-btn {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    margin-bottom: 20px;
-    cursor: pointer;
-    border-radius: 5px;
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
-  
+
   .services {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding-left: 10vh;
+    gap: 10px;
   }
-  
+
   .service {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    height: 60px;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .chat {
-    background-color: hsla(60, 91%, 70%, 0.6);
-    color: #ff4081;
-    width:30vh;
-    height:30vh;
+    font-size: 1rem;
   }
 
-  img{
-    height:min-content;
-    width: min-content;
+  .service img {
+    max-width: 80px;
+    max-height: 80px;
   }
-  
-  .translator {
-    background-color: hsla(198, 89%, 89%, 0.6);
-    color: #3f51b5;
-    width:30vh;
-    height:30vh;
-  }
-  
-  .faqs {
-    background-color: hsla(286, 43%, 81%, 0.6);
-    color: #673ab7;
-    width:30vh;
-    height:30vh;
-  }
-  
-  .about {
-    background-color:  hsla(4, 80%, 70%, 0.6);
-    color: #e91e63;
-    width:30vh;
-    opacity:10vh;
-    height:30vh;
+}
+
+@media (max-width: 480px) {
+  .services {
+    grid-template-columns: 1fr;
   }
 
-  block{
-    background: (to bottom right, #a0e9fd, #cf8bf3);
-    color: #e91e63;
-    width:30vh;
-    opacity:10vh;
-    height:30vh;
+  h1 {
+    font-size: 1.6rem;
   }
 
-  .logout{
-    background-color: red;
-    color: azure;
-
+  .be-healthy-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
   }
 
-  
-  
+  .service {
+    font-size: 0.9rem;
+  }
+
+  .service img {
+    max-width: 60px;
+    max-height: 60px;
+  }
+
+  .logout {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
